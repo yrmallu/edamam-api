@@ -1,0 +1,29 @@
+<%= form_with url: recipes_path, method: :get do |f| %>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <div class="input-group">
+        <%= f.text_field :search, class: "form-control" %>
+        <div class="input-group-btn">
+          <%= f.submit "Search", class: "btn btn-default" %>
+        </div> 
+      </div> 
+    </div>
+  </div>
+<% end %>
+  
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <th scope="row"><%= image_tag(recipe.image, height: '32', width: '32') %></th>
+        <td><%= recipe.name %></td>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>
