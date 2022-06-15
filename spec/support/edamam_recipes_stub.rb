@@ -1,5 +1,5 @@
 def edamam_recipes_api_request
-  stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=db174bf3&app_key=90597395fbf45646a5f2d9f54d5c8de1&q=chicken&type=public").to_return(
+  stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=#{ENV['EDAMAM_API_APP_ID']}&app_key=#{ENV['EDAMAM_API_APP_KEY']}&q=chicken&type=public").to_return(
         status: 200,
         body: lambda do |request|
                 api_response.to_json
