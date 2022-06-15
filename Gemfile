@@ -29,6 +29,7 @@ gem "redis", "~> 4.0"
 
 gem 'faraday'
 
+gem 'dotenv-rails', groups: %i[development test]
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

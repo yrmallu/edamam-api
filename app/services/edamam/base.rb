@@ -3,8 +3,8 @@ module Edamam
 
     DEFAULT_PARAMS = {
       type: 'public',
-      app_id: 'db174bf3',
-      app_key: '90597395fbf45646a5f2d9f54d5c8de1'
+      app_id: ENV['EDAMAM_API_APP_ID'],
+      app_key: ENV['EDAMAM_API_APP_KEY']
     }.freeze
 
     def connection
